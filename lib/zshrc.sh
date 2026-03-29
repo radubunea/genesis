@@ -107,6 +107,39 @@ export NVM_DIR="\$HOME/.nvm"
 [[ -s "\$NVM_DIR/nvm.sh" ]] && \. "\$NVM_DIR/nvm.sh"
 [[ -s "\$NVM_DIR/bash_completion" ]] && \. "\$NVM_DIR/bash_completion"
 
+# pnpm
+export PNPM_HOME="\$HOME/Library/pnpm"
+case ":\$PATH:" in
+  *":\$PNPM_HOME:"*) ;;
+  *) export PATH="\$PNPM_HOME:\$PATH" ;;
+esac
+
+# bun
+export BUN_INSTALL="\$HOME/.bun"
+case ":\$PATH:" in
+  *":\$BUN_INSTALL/bin:"*) ;;
+  *) export PATH="\$BUN_INSTALL/bin:\$PATH" ;;
+esac
+[[ -s "\$HOME/.bun/_bun" ]] && source "\$HOME/.bun/_bun"
+
+# Local tools
+export PATH="\$HOME/.local/bin:\$PATH"
+
+# Common aliases
+alias ip="ipconfig getifaddr en0"
+alias zshconfig="nvim ~/.zshrc"
+alias zshsource="source ~/.zshrc"
+alias sshhome="cd ~/.ssh"
+alias sshconfig="nvim ~/.ssh/config"
+alias gitconfig="nvim ~/.gitconfig"
+alias c="cursor"
+alias gits="git status"
+alias gitd="git diff"
+alias gitl="git lg"
+alias gita="git add ."
+alias lfg="codex --yolo"
+alias code="cursor"
+
 # Faster directory navigation
 setopt autocd
 alias ...='../..'
@@ -114,9 +147,11 @@ alias ....='../../..'
 alias .....='../../../..'
 alias ......='../../../../..'
 
-# Let's fkn go
-alias lfg="codex --yolo"
-alias code="cursor"
+# Optional tool initialization
+command -v starship >/dev/null 2>&1 && eval "\$(starship init zsh)"
+
+# Machine-local overrides and secrets
+[[ -f "\$HOME/.zshrc.local" ]] && source "\$HOME/.zshrc.local"
 ${end_marker}
 EOF
 

@@ -7,6 +7,7 @@ Genesis finished. Manual steps:
 - Sign in to Stripe: `stripe login`
 - Confirm Mac App Store sign-in if any `mas` installs were skipped
 - Open Cursor once if you need to finish CLI or extension setup
+- Put machine-local secrets and tokens in `~/.zshrc.local`
 
 EOF
 }

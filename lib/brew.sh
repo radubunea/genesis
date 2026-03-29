@@ -2,6 +2,7 @@ install_brew_libs() {
   local brew_libs=(
     "btop"
     "oven-sh/bun/bun"
+    "starship"
     "dockutil"
     "gh"
     "git"
@@ -9,6 +10,10 @@ install_brew_libs() {
     "mas"
     "pnpm"
     "stripe"
+    "tree"
+    "zsh-autosuggestions"
+    "zsh-completions"
+    "zsh-syntax-highlighting"
   )
 
   local tool

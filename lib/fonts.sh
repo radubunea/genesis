@@ -2,7 +2,9 @@ install_fonts() {
   local font_casks=(
     "font-geist"
     "font-geist-mono"
+    "font-hack-nerd-font"
     "font-inter"
+    "font-jetbrains-mono"
   )
 
   local font_cask

@@ -1,20 +1,26 @@
 install_cursor_extensions() {
   local extensions=(
+    "anweber.reveal-button"
     "atomiks.moonlight"
+    # Optional if you regularly write Mermaid diagrams in docs.
     "bierner.markdown-mermaid"
     "biomejs.biome"
     "bradlc.vscode-tailwindcss"
-    "christian-kohler.npm-intellisense"
-    "csstools.postcss"
-    "dbaeumer.vscode-eslint"
+    "coderabbit.coderabbit-vscode"
+    "davidanson.vscode-markdownlint"
+    "eamodio.gitlens"
     "esbenp.prettier-vscode"
+    "github.vscode-github-actions"
     "mikestead.dotenv"
+    "ms-playwright.playwright"
     "openai.chatgpt"
-    "oxc.oxc-vscode"
-    "Prisma.prisma"
-    "tamasfe.even-better-toml"
+    "pflannery.vscode-versionlens"
+    "prisma.prisma"
+    "streetsidesoftware.code-spell-checker"
     "unifiedjs.vscode-mdx"
-    "YoavBls.pretty-ts-errors"
+    "usernamehw.errorlens"
+    "vitest.explorer"
+    "yoavbls.pretty-ts-errors"
   )
 
   if ! command -v cursor >/dev/null 2>&1; then
